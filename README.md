@@ -5,7 +5,8 @@ See a demo - https://danjohnson95.github.com/lolbox/
 
 ## Source Code
 
-The unminified source code can be found in /src/js and /src/css.
+The unminified source code can be found in /src.
+The main JS file is here - https://github.com/danjohnson95/lolbox/blob/master/src/js/lolbox.js
 
 This repo uses Gulp to compile SCSS and minify files.
 
