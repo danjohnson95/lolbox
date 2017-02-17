@@ -1,0 +1,70 @@
+$black_10: rgba(0,0,0,0.1);
+$black_50: rgba(0,0,0,0.5);
+$white: #fff;
+
+.lolbox {
+	&.lolbox-outer {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $black_50;
+		opacity: 0;
+		transition: 0.3s all;
+		&.show {
+			opacity: 1;
+		}
+		&.hide {
+			display: none;
+		}
+	}
+	&.lolbox-inner {
+		width: 90%;
+		max-width: 500px;
+		background-color: $white;
+		position: fixed;
+		top: 100px;
+		border-radius: 5px;
+		box-shadow: 0 0 2px 2px $black_10;
+		opacity: 0;
+		transform: translate3d(0, 200px, 0);
+		transition: 0.5s all;
+		&.hide {
+			display: none;
+		}
+		&.show {
+			transform: translate3d(0,0,0);
+			opacity: 1;
+		}
+		.lolbox-head {
+			padding: 1em;
+			border-bottom: 1px solid $black_10;
+			div[data-close] {
+				float: right;
+				font-size: 2em;
+				position: absolute;
+				top: 0;
+				right: 10px;
+				cursor: pointer;
+				&:hover {
+					font-weight: bold;
+				}
+			}
+		}
+		.lolbox-footer {
+			padding: 1em;
+			text-align: right;
+			border-top: 1px solid $black_10;
+			button {
+				margin-left: 1em;
+				&:first-of-type {
+					margin: 0;
+				}
+			}
+		}
+		.lolbox-contents {
+			padding: 1em;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+$black_10: rgba(0,0,0,0.1);
+$black_20: rgba(0,0,0,0.2);
+$black_40: rgba(0,0,0,0.4);
+$black_50: rgba(0,0,0,0.5);
+
+$font_0: Helvetica Neue;
+$font_1: sans-serif;
+
+%extend_1 {
+	font-family: $font_0, $font_1;
+	font-size: 13px;
+	border: 1px solid $black_20;
+	padding: 1em;
+	border-radius: 5px;
+	margin: 0;
+	width: 300px;
+}
+
+
+body {
+	margin: 0;
+	font-family: $font_0, $font_1;
+	font-size: 13px;
+
+	#content {
+		margin: 0 auto;
+		max-width: 1000px;
+
+		input {
+			@extend %extend_1;
+			&:disabled {
+				background-color: $black_10;
+				cursor: not-allowed;
+			}
+			&[type=checkbox]{
+				margin: 1em 0;
+				width: 20px;
+				height: 20px;
+			}
+		}
+		textarea {
+			@extend %extend_1;
+		}
+		button {
+			@extend %extend_1;
+			background-color: $black_10;
+			color: $black_50;
+			width: 70px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		div.sub a {
+			text-align: center;
+			color: $black_50;
+			text-decoration: none;
+			display: block;
+		}
+
+		hr {
+			margin: 2em 0;
+			border: 0;
+			border-top: 1px solid $black_10;
+		}
+		
+		form {
+			margin: 2em 0;
+			ul {
+				padding: 0;
+				list-style: none;
+			}
+			li label {
+				width: 150px;
+				display: inline-block;
+				vertical-align: top;
+				padding: 1em 0;
+			}
+		}
+
+		h2 div.open-code {
+			font-size: .6em;
+			display: inline;
+			color: $black_40;
+			&:after {
+				content: "\00BB";
+				margin-left: 3px;
+			}
+		}
+	}
+}

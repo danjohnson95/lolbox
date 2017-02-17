@@ -4,7 +4,7 @@
   "description": "",
   "main": "lolbox.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/danjohnson95/lolbox#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
   }
 }
