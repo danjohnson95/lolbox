@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Lolbox Demo</title>
+		<link rel="stylesheet" href="demo.css">
+		<link rel="stylesheet" href="lolbox.css">
+	</head>
+
+	<body>
+
+		<div id="content">
+			<h1>Lolbox Demo</h1>
+			<div class="sub">
+				<a href="https://github.com/danjohnson95/lolbox">
+					github.com/danjohnson95/lolbox
+				</a>
+			</div>
+
+			<hr>
+
+			<h2>Standard Lolbox <div class="open-code">See code</div></h2>
+			<p>
+				Clicking the Open button will create a new instance of Lolbox
+				using the details provided, and then open this modal.
+			</p>
+
+			<form class="standard-lolbox">
+				<ul>
+					<li>
+						<label>Display header</label>
+						<input type="checkbox" class="display-header" checked>
+					</li>
+					<li>
+						<label>Title</label>
+						<input type="text" class="title-dependant title" placeholder="Modal title" value="Lolbox Demo">
+					</li>
+					<li>
+						<label>Top close button</label>
+						<input type="checkbox" class="title-dependant closebtn">
+					</li>
+					<li>
+						<label>Contents</label>
+						<textarea placeholder="Modal contents" class="contents"></textarea>
+					</li>
+					<li>
+						<label>Display footer</label>
+						<input type="checkbox" checked class="footer">
+					</li>
+					<li>
+						<label></label>
+						<button>Open</button>
+					</li>
+				</ul>
+			</form>
+
+			<hr>
+
+			<h2>AJAX Lolbox <div class="open-code">See code</div></h2>
+			<p>
+				Clicking the Open button will create a new instance of Lolbox
+				using the details provided, and grab contents with an AJAX
+				request. The modal will open and the AJAX content will be
+				injected in.
+			</p>
+
+			<form class="ajax-lolbox">
+				<ul>
+					<li>
+						<label>Display header</label>
+						<input type="checkbox" class="display-header" checked>
+					</li>
+					<li>
+						<label>Title</label>
+						<input type="text" class="title-dependant title" placeholder="Modal title" value="Lolbox Demo">
+					</li>
+					<li>
+						<label>Top close button</label>
+						<input type="checkbox" class="title-dependant closebtn">
+					</li>
+					<li>
+						<label>Display footer</label>
+						<input type="checkbox" checked class="footer">
+					</li>
+					<li>
+						<label></label>
+						<button>Open</button>
+					</li>
+				</ul>
+			</form>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="lolbox.js"></script>
+		<script src="demo.js"></script>
+
+	</body>
+</html>

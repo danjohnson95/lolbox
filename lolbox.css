@@ -1,0 +1,67 @@
+.lolbox.lolbox-outer{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: 0.3s all;
+}
+
+.lolbox.lolbox-outer.show{
+	opacity: 1;
+}
+
+.lolbox.lolbox-outer.hide, .lolbox.lolbox-inner.hide{
+	display: none;
+}
+.lolbox.lolbox-inner{
+	width: 90%;
+	max-width: 500px;
+	background-color: #fff;
+	position: fixed;
+	top: 100px;
+	border-radius: 5px;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
+	opacity: 0;
+	transform: translate3d(0, 200px, 0);
+	transition: 0.5s all;
+}
+.lolbox.lolbox-inner.show{
+	transform: translate3d(0,0,0);
+	opacity: 1;
+}
+.lolbox.lolbox-inner .lolbox-head, .lolbox.lolbox-inner .lolbox-footer, .lolbox.lolbox-inner .lolbox-contents{
+	padding: 1em;
+}
+
+.lolbox.lolbox-inner .lolbox-head{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.lolbox.lolbox-inner .lolbox-head div[data-close]{
+	float: right;
+	font-size: 2em;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	cursor: pointer;
+}
+
+.lolbox.lolbox-inner .lolbox-head div[data-close]:hover{
+	font-weight: bold;
+}
+
+.lolbox.lolbox-inner .lolbox-footer{
+	text-align: right;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.lolbox.lolbox-inner .lolbox-footer button{
+	margin-left: 1em;
+}
+
+.lolbox.lolbox-inner .lolbox-footer button:first-of-type{
+	margin: 0;
+}

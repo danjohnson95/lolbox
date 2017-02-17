@@ -1,0 +1,22 @@
+{
+  "name": "lolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lolbox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danjohnson95/lolbox.git"
+  },
+  "author": "Dan Johnson <dan@danj.eu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danjohnson95/lolbox/issues"
+  },
+  "homepage": "https://github.com/danjohnson95/lolbox#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
