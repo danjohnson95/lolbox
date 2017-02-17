@@ -1,23 +1,21 @@
-function handleOpen(e){
-	e.preventDefault();
-	var title, header, closebtn, contents, footer, ajax, form;
+function getObj(form){
+	var title, header, closebtn, contents, footer, ajax;
 	ajax = {};
 
-	form = $(this);
 	title = form.find('.title').val();
 	header = form.find('.display-header').is(':checked');
 	closebtn = form.find('.closebtn').is(':checked');
 	contents = form.find('.contents').val();
 	footer = form.find('.footer').is(':checked');
 
-	if($(this).is('.ajax-lolbox')){
+	if(form.is('.ajax-lolbox')){
 		ajax = {
 			use: true,
 			url: 'demo-ajax.html'
 		};
 	}
 
-	$(document).lolbox({
+	return {
 		ajax: ajax,
 		contents: contents,
 		head: {
@@ -28,7 +26,13 @@ function handleOpen(e){
 		foot: {
 			use: footer
 		}
-	});
+	}
+}
+
+function handleOpen(e){
+	e.preventDefault();
+	var obj = getObj($(this));
+	$(document).lolbox(obj);
 }
 
 $(document).on('change', '.display-header', function(){
